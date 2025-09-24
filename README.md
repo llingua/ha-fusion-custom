@@ -8,6 +8,21 @@ A modern, easy-to-use and performant custom [Home Assistant](https://www.home-as
 
 If you find this project useful, be sure to 🌟 this repository! If you love it, please consider donating! ❤️ <https://www.paypal.com/paypalme/matt8707>
 
+## 🍴 Fork Notice
+
+This is a fork of the original ha-fusion project created by matt8707. All credit for the initial development and core architecture goes to the original author.
+
+If you find this project useful, please consider supporting the original creator: ❤️ <https://www.paypal.com/paypalme/matt8707>
+
+### 🆕 Custom Features in This Fork
+
+This fork includes additional features not present in the original:
+
+- **🎯 Universal Bar Component**: The Bar component, originally available only in the sidebar, is now also available in the main dashboard
+- **📐 Multiple Sizes**: Choose between Compact, Medium, and Large sizes for your bars
+- **🖱️ Click to Edit**: Direct editing of bar components from the main dashboard
+- **⚙️ Enhanced Configuration**: Improved modal with size selection and better user experience
+
 ---
 
 ## 📣 Pre-beta
@@ -20,13 +35,17 @@ The current state of this project is **pre-beta**. This means that there's basic
 
 ### Add-on
 
-For "Operating System" or "Supervised" installation methods, you can install ha-fusion as an add-on:
+For "Operating System" or "Supervised" installation methods, you can install this custom version as an add-on:
 
-1. **Add Repository**: To begin, add the ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/matt8707/addon-ha-fusion>.
+1. **Add Repository**: To begin, add the custom ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/llingua/addon-ha-fusion>.
 
-   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fmatt8707%2Faddon-ha-fusion)
+   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion)
 
-2. **Install Add-on**: After adding the repository, refresh the add-on store page. Locate ha-fusion in the list and proceed with the installation.
+2. **Install Add-on**: After adding the repository, refresh the add-on store page. Locate "HA Fusion Custom" in the list and proceed with the installation.
+
+#### Original Version
+
+For the original version without custom features, use: <https://github.com/matt8707/addon-ha-fusion>
 
 ---
 
@@ -34,7 +53,7 @@ For "Operating System" or "Supervised" installation methods, you can install ha-
 
 If you're using the "Container" or "Core" installation methods, ha-fusion can be installed via Docker:
 
-1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/matt8707/ha-fusion/blob/main/docker-compose.yml) file in a suitable directory.
+1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/llingua/ha-fusion-custom/blob/develop/docker-compose.yml) file in a suitable directory.
 
 2. **Create Container**:
    Run the following commands in your terminal to start the container:
@@ -122,9 +141,13 @@ To begin contributing to the project, you'll first need to install node. It's al
 # prerequisites (macos)
 brew install node pnpm
 
-# install
-git clone https://github.com/matt8707/ha-fusion.git
-cd ha-fusion
+# install (custom version)
+git clone -b develop https://github.com/llingua/ha-fusion-custom.git
+cd ha-fusion-custom
+
+# or original version
+# git clone https://github.com/matt8707/ha-fusion.git
+# cd ha-fusion
 pnpm install
 
 # environment
