@@ -8,7 +8,7 @@ A modern, easy-to-use and performant custom [Home Assistant](https://www.home-as
 
 If you find this project useful, be sure to 🌟 this repository! If you love it, please consider donating! ❤️ <https://www.paypal.com/paypalme/matt8707>
 
-## 🍴 Fork Notice
+## 🍴 Fork Notice - Don't use for production Envirornment
 
 This is a fork of the original [ha-fusion](https://github.com/matt8707/ha-fusion) project created by [matt8707](https://github.com/matt8707). All credit for the initial development and core architecture goes to the original author.
 
@@ -22,9 +22,9 @@ If you find this project useful, please consider supporting the original creator
 
 For "Operating System" or "Supervised" installation methods, you can install ha-fusion as an add-on:
 
-1. **Add Repository**: To begin, add the ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/matt8707/addon-ha-fusion>.
+1. **Add Repository**: To begin, add the ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/llingua/ha-fusion-custom/>.
 
-   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fmatt8707%2Faddon-ha-fusion)
+   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion)
 
 2. **Install Add-on**: After adding the repository, refresh the add-on store page. Locate ha-fusion in the list and proceed with the installation.
 
