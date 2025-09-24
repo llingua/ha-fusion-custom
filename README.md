@@ -8,7 +8,7 @@ A modern, easy-to-use and performant custom [Home Assistant](https://www.home-as
 
 If you find this project useful, be sure to 🌟 this repository! If you love it, please consider donating! ❤️ <https://www.paypal.com/paypalme/matt8707>
 
-## 🍴 Fork Notice 
+## 🍴 Fork Notice
 
 This is a fork of the original [ha-fusion](https://github.com/matt8707/ha-fusion) project created by [matt8707](https://github.com/matt8707). All credit for the initial development and core architecture goes to the original author.
 
@@ -20,13 +20,27 @@ If you find this project useful, please consider supporting the original creator
 
 ### Add-on
 
-For "Operating System" or "Supervised" installation methods, you can install ha-fusion as an add-on:
+For "Operating System" or "Supervised" installation methods, you can install ha-fusion as an add-on. **Choose between two versions:**
 
-1. **Add Repository**: To begin, add the ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/llingua/ha-fusion-custom/>.
+#### 🏠 **HA Fusion Custom (Stable) - Recommended for Production**
 
+Versione stabile basata sul branch `main` con Universal Bar Component testato.
+
+1. **Add Repository**:
    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion)
 
-2. **Install Add-on**: After adding the repository, refresh the add-on store page. Locate ha-fusion in the list and proceed with the installation.
+2. **Install Add-on**: Locate "HA Fusion Custom" and install.
+
+#### 🚀 **HA Fusion Custom Dev (Development) - Latest Features**
+
+Versione development basata sul branch `develop` con le ultime funzionalità e features sperimentali.
+
+1. **Add Repository**:
+   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion-dev)
+
+2. **Install Add-on**: Locate "HA Fusion Custom Dev" and install.
+
+> ⚠️ **Development Version**: Include features sperimentali. Sconsigliato per produzione.
 
 ---
 
@@ -34,7 +48,7 @@ For "Operating System" or "Supervised" installation methods, you can install ha-
 
 If you're using the "Container" or "Core" installation methods, ha-fusion can be installed via Docker:
 
-1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/matt8707/ha-fusion/blob/main/docker-compose.yml) file in a suitable directory.
+1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/llingua/ha-fusion-custom/blob/main/docker-compose.yml) file in a suitable directory.
 
 2. **Create Container**:
    Run the following commands in your terminal to start the container:
@@ -122,9 +136,13 @@ To begin contributing to the project, you'll first need to install node. It's al
 # prerequisites (macos)
 brew install node pnpm
 
-# install
-git clone https://github.com/matt8707/ha-fusion.git
-cd ha-fusion
+# install stable version (main branch)
+git clone https://github.com/llingua/ha-fusion-custom.git
+cd ha-fusion-custom
+
+# OR install development version (develop branch)
+git clone -b develop https://github.com/llingua/ha-fusion-custom.git
+cd ha-fusion-custom
 pnpm install
 
 # environment
