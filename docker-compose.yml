@@ -7,7 +7,7 @@ services:
       dockerfile: Dockerfile.custom
     container_name: ha-fusion-custom
     ports:
-      - "5050:5050"
+      - '5050:5050'
     volumes:
       - ./data:/app/data
     environment:
