@@ -20,6 +20,7 @@
 	import ConfigButtons from '$lib/Modal/ConfigButtons.svelte';
 	import Ripple from 'svelte-ripple';
 	import PictureElements from '$lib/Main/PictureElements.svelte';
+	import UniversalBar from '$lib/Universal/Bar.svelte';
 
 	export let isOpen: boolean;
 	export let sel: any;
@@ -79,6 +80,18 @@
 
 	$: itemTypes = [
 		{
+			id: 'bar',
+			type: 'Bar',
+			component: UniversalBar,
+			props: {
+				entity_id: $demo.sensor,
+				name: 'Demo Bar',
+				math: 'x',
+				variant: 'main',
+				size: 'medium'
+			}
+		},
+		{
 			id: 'button',
 			type: $lang('button'),
 			component: Button,
@@ -137,6 +150,12 @@
 		$record();
 
 		switch (sel?.type) {
+			case 'bar':
+				openModal(() => import('$lib/Modal/BarConfig.svelte'), {
+					demo: $demo.sensor,
+					sel
+				});
+				break;
 			case 'button':
 				openModal(() => import('$lib/Modal/ButtonConfig.svelte'), {
 					demo: $demo.sensor,

@@ -13,7 +13,7 @@
 	} from '$lib/Stores';
 	import { onDestroy } from 'svelte';
 	import { slide } from 'svelte/transition';
-	import Bar from '$lib/Sidebar/Bar.svelte';
+	import Bar from '$lib/Universal/Bar.svelte';
 	import ConfigButtons from '$lib/Modal/ConfigButtons.svelte';
 	import Modal from '$lib/Modal/Index.svelte';
 	import Select from '$lib/Components/Select.svelte';
@@ -39,14 +39,24 @@
 
 	$: math = sel?.math || '';
 
+	// Inizializza name solo una volta quando sel cambia inizialmente
+	$: if (sel?.name !== undefined && name === undefined) {
+		name = sel?.name;
+	}
+
 	$: options = $entityList('sensor');
 
 	function set(key: string, event?: any) {
 		sel = updateObj(sel, key, event);
-		$dashboard = $dashboard;
+
+		// Forza aggiornamento reattivo del dashboard
+		$dashboard = { ...$dashboard };
 	}
 
-	onDestroy(() => $record());
+	onDestroy(() => {
+		// Aggiungi alla cronologia quando il modal si chiude
+		$record();
+	});
 </script>
 
 {#if isOpen}
@@ -56,7 +66,7 @@
 		<h2>{$lang('preview')}</h2>
 
 		<div class="preview">
-			<Bar id={sel?.id} {entity_id} {name} {math} />
+			<Bar id={sel?.id} {entity_id} {name} {math} variant="main" size={sel?.size || 'compact'} />
 		</div>
 
 		<h2>{$lang('entity')}</h2>
@@ -84,7 +94,7 @@
 				id="bar_name"
 				type="text"
 				bind:value={name}
-				on:change={(event) => set('name', event)}
+				on:input={() => set('name', name)}
 				placeholder={getName(sel, (entity_id && $states[entity_id]) || undefined)}
 				class:input={true}
 				class:placeholder={!name}
@@ -153,6 +163,32 @@
 				use:Ripple={$ripple}
 			>
 				{$lang('hidden')}
+			</button>
+		</div>
+
+		<h2>Dimensione</h2>
+
+		<div class="button-container">
+			<button
+				class:selected={sel?.size === 'compact' || !sel?.size}
+				on:click={() => set('size', 'compact')}
+				use:Ripple={$ripple}
+			>
+				Compatta
+			</button>
+			<button
+				class:selected={sel?.size === 'medium'}
+				on:click={() => set('size', 'medium')}
+				use:Ripple={$ripple}
+			>
+				Media
+			</button>
+			<button
+				class:selected={sel?.size === 'large'}
+				on:click={() => set('size', 'large')}
+				use:Ripple={$ripple}
+			>
+				Grande
 			</button>
 		</div>
 

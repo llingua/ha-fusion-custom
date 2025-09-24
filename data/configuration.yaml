@@ -1,1 +1,3 @@
-locale: en
+locale: it
+addons:
+  youtube: false

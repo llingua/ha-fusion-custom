@@ -1,13 +1,21 @@
+version: '3.8'
+
 services:
-  ha-fusion:
-    container_name: ha-fusion
-    image: ghcr.io/matt8707/ha-fusion
-    volumes:
-      - /path/to/ha-fusion:/app/data
-    network_mode: bridge
+  ha-fusion-custom:
+    build:
+      context: .
+      dockerfile: Dockerfile.custom
+    container_name: ha-fusion-custom
     ports:
-      - 5050:5050
+      - "5050:5050"
+    volumes:
+      - ./data:/app/data
     environment:
-      TZ: Europe/Stockholm
-      HASS_URL: http://192.168.1.241:8123
-    restart: always
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - homeassistant
+
+networks:
+  homeassistant:
+    external: true

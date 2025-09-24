@@ -12,6 +12,11 @@ views:
           - name: Test
             id: 2171067078835
             items:
+              - id: 1456897530185
+                type: bar
+                entity_id: sensor.termostato_sonoff_humidity
+                size: compact
+                name: Umidità Cameretta
               - type: button
                 entity_id: light.studio_dator
                 id: 5008685947164
@@ -50,18 +55,10 @@ views:
           - name: Media
             id: 7859955675791
             items:
-              - type: media
-                id: 5276106620601
-                conditional:
-                  - entity_id: sensor.plex_recently_added
-                    name: Senast tillagt
-                    icon: mdi:plex
-                    color: orange
-                  - entity_id: media_player.vardagsrum
-                  - entity_id: media_player.sovrum
-                  - entity_id: media_player.spotify
-                    icon: mdi:spotify
-                  - entity_id: media_player.kok
+              - type: button
+                id: 3574383219011
+                entity_id: script.home_leave
+                icon: fluent:hand-wave-20-filled
           - name: Övrigt
             items:
               - type: button
@@ -108,13 +105,21 @@ views:
             id: 8128083996424
             entity_id: person.sanja
           - type: button
-            id: 3574383219011
-            entity_id: script.home_leave
-            icon: fluent:hand-wave-20-filled
-          - type: button
             id: 3827902926530
             entity_id: script.home_arrive
             icon: material-symbols:home-rounded
+          - type: media
+            id: 5276106620601
+            conditional:
+              - entity_id: sensor.plex_recently_added
+                name: Senast tillagt
+                icon: mdi:plex
+                color: orange
+              - entity_id: media_player.vardagsrum
+              - entity_id: media_player.sovrum
+              - entity_id: media_player.spotify
+                icon: mdi:spotify
+              - entity_id: media_player.kok
         id: 1412018494330
   - name: Entities
     icon: material-symbols:filter-list-rounded
@@ -252,6 +257,11 @@ sidebar:
     entity_id: sensor.template_greet
     date: false
     id: 2790676343773
+  - id: 8427205134058
+    type: weather_forecast
+    entity_id: weather.openweathermap
+    forecast_type: hourly
+    days_to_show: 7
   - type: weather
     entity_id: weather.openweathermap
     weather_sensor: sensor.openweathermap_weather
