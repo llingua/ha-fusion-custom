@@ -35,13 +35,31 @@ The current state of this project is **pre-beta**. This means that there's basic
 
 ### Add-on
 
-For "Operating System" or "Supervised" installation methods, you can install this custom version as an add-on:
+For "Operating System" or "Supervised" installation methods, you can install ha-fusion as an add-on. **Choose between two versions:**
 
-1. **Add Repository**: To begin, add the custom ha-fusion add-on repository to your Home Assistant instance. Click the button below or manually add the repository using this URL: <https://github.com/llingua/addon-ha-fusion>.
+#### 🏠 **HA Fusion Custom (Stable) - Recommended for Production**
 
+Versione stabile basata sul branch `main` con Universal Bar Component testato.
+
+1. **Add Repository**:
    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion)
 
-2. **Install Add-on**: After adding the repository, refresh the add-on store page. Locate "HA Fusion Custom" in the list and proceed with the installation.
+2. **Install Add-on**: Locate "HA Fusion Custom" and install.
+
+#### 🚀 **HA Fusion Custom Dev (Development) - Latest Features** ⭐
+
+**🎯 Stai visualizzando il branch DEVELOP! Questa versione include le ultime funzionalità.**
+
+Versione development basata sul branch `develop` con le ultime funzionalità e features sperimentali.
+
+1. **Add Repository**:
+   [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fllingua%2Faddon-ha-fusion-dev)
+
+2. **Install Add-on**: Locate "HA Fusion Custom Dev" and install.
+
+> ⚠️ **Development Version**: Include features sperimentali. Sconsigliato per produzione.
+>
+> 🚀 **Latest Features in Dev**: Universal Bar Component, Dependabot auto-updates, Security fixes, Latest dependencies
 
 #### Original Version
 
@@ -53,7 +71,7 @@ For the original version without custom features, use: <https://github.com/matt8
 
 If you're using the "Container" or "Core" installation methods, ha-fusion can be installed via Docker:
 
-1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/llingua/ha-fusion-custom/blob/develop/docker-compose.yml) file in a suitable directory.
+1. **Docker Compose File**: Place your edited copy of the [docker-compose.yml](https://github.com/llingua/ha-fusion-custom/blob/develop/docker-compose.yml) file in a suitable directory. (This version uses develop branch for latest features)
 
 2. **Create Container**:
    Run the following commands in your terminal to start the container:
@@ -141,8 +159,12 @@ To begin contributing to the project, you'll first need to install node. It's al
 # prerequisites (macos)
 brew install node pnpm
 
-# install (custom version)
+# install development version (develop branch) - YOU ARE HERE!
 git clone -b develop https://github.com/llingua/ha-fusion-custom.git
+cd ha-fusion-custom
+
+# OR install stable version (main branch)
+git clone https://github.com/llingua/ha-fusion-custom.git
 cd ha-fusion-custom
 
 # or original version
