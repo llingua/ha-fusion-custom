@@ -1,7 +1,51 @@
+# Configurazione Dependabot per ha-fusion-custom
+# Le PR vengono create sul branch develop per mantenere main pulito
+
 version: 2
 updates:
-  - package-ecosystem: 'npm'
-    directory: '/'
+  # Aggiornamenti per le dipendenze npm
+  - package-ecosystem: "npm"
+    directory: "/"
     schedule:
-      interval: 'monthly'
-    versioning-strategy: 'increase'
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Rome"
+    target-branch: "develop"
+    reviewers:
+      - "llingua"
+    assignees:
+      - "llingua"
+    commit-message:
+      prefix: "npm"
+      include: "scope"
+    open-pull-requests-limit: 5
+    allow:
+      - dependency-type: "direct"
+      - dependency-type: "indirect"
+    ignore:
+      # Ignora aggiornamenti major per dipendenze critiche
+      - dependency-name: "svelte"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@sveltejs/kit"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "vite"
+        update-types: ["version-update:semver-major"]
+
+  # Aggiornamenti per GitHub Actions (se presenti)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+      time: "09:00"
+      timezone: "Europe/Rome"
+    target-branch: "develop"
+    reviewers:
+      - "llingua"
+    assignees:
+      - "llingua"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
+    open-pull-requests-limit: 3
