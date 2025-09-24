@@ -8,11 +8,11 @@ A modern, easy-to-use and performant custom [Home Assistant](https://www.home-as
 
 If you find this project useful, be sure to 🌟 this repository! If you love it, please consider donating! ❤️ <https://www.paypal.com/paypalme/matt8707>
 
----
+## 🍴 Fork Notice
 
-## 📣 Pre-beta
+This is a fork of the original [ha-fusion](https://github.com/matt8707/ha-fusion) project created by [matt8707](https://github.com/matt8707). All credit for the initial development and core architecture goes to the original author.
 
-The current state of this project is **pre-beta**. This means that there's basic functionality missing, incomplete features and unresolved issues. General feedback, bug reports and feature requests are welcome!
+If you find this project useful, please consider supporting the original creator: ❤️ <https://www.paypal.com/paypalme/matt8707>
 
 ---
 
