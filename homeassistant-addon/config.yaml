@@ -24,4 +24,5 @@ options:
   log_level: info
 schema:
   log_level: 'list(trace|debug|info|notice|warning|error|fatal)?'
-image: 'ghcr.io/home-assistant/{arch}-addon-ha-fusion-custom'
+url: 'https://github.com/llingua/ha-fusion-custom'
+repository: 'https://github.com/llingua/ha-fusion-custom'
