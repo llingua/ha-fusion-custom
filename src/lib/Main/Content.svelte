@@ -6,6 +6,7 @@
 	import Camera from '$lib/Main/Camera.svelte';
 	import Configure from '$lib/Main/Configure.svelte';
 	import Empty from '$lib/Main/Empty.svelte';
+	import UniversalBar from '$lib/Universal/Bar.svelte';
 
 	export let item: any;
 	export let sectionName: string | undefined = undefined;
@@ -27,6 +28,17 @@
 	<PictureElements sel={item} />
 {:else if item?.type === 'camera'}
 	<Camera sel={item} responsive={false} muted={true} controls={false} />
+{:else if item?.type === 'bar'}
+	{#key `${item?.entity_id}-${item?.name}-${item?.math}-${item?.size}`}
+		<UniversalBar
+			entity_id={item?.entity_id}
+			name={item?.name}
+			math={item?.math}
+			id={item?.id}
+			variant="main"
+			size={item?.size || 'medium'}
+		/>
+	{/key}
 {:else if item?.type === 'empty'}
 	<Empty sel={item} />
 {:else}

@@ -109,15 +109,29 @@
 	<span>
 		<h2>Version</h2>
 		<p>
-			{#if installed && latest}
-				{#if compare(installed, latest) > 0}
-					{$lang('update_available')} {latest}
-				{:else}
-					{$lang('update_up_to_date')} {installed}
+			{#if installed}
+				<strong style="color: #00dbff;">HA Fusion Custom</strong><br />
+				Version: {installed}<br />
+				{#if installed.includes('custom-dev')}
+					<span style="color: #00ff88;">🔧 Development Build (Branch: develop)</span><br />
+					<span style="font-size: 0.8rem; opacity: 0.7;">Includes Universal Bar Component</span><br
+					/>
 				{/if}
 
+				{#if latest}
+					{#if compare(installed, latest) > 0}
+						Original version {latest} available
+					{:else}
+						Based on original {latest || 'latest'}
+					{/if}
+				{/if}
+
+				<a href="https://github.com/llingua/ha-fusion-custom" target="_blank">
+					Custom Repository
+				</a>
+				|
 				<a href="https://github.com/matt8707/ha-fusion/releases" target="_blank">
-					{$lang('update_release_notes')}
+					Original Releases
 				</a>
 			{:else if error_code}
 				{$lang('error')}: {error_code}

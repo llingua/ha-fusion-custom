@@ -36,7 +36,7 @@
 	let WeatherForecast: ComponentType;
 
 	const imports = {
-		bar: () => import('$lib/Sidebar/Bar.svelte').then((c) => (Bar = c.default)),
+		bar: () => import('$lib/Universal/Bar.svelte').then((c) => (Bar = c.default)),
 		camera: () => import('$lib/Sidebar/Camera.svelte').then((c) => (Camera = c.default)),
 		configure: () => import('$lib/Sidebar/Configure.svelte').then((c) => (Configure = c.default)),
 		date: () => import('$lib/Sidebar/Date.svelte').then((c) => (Date = c.default)),
@@ -271,6 +271,8 @@
 								name={item?.name}
 								math={item?.math}
 								id={item?.id}
+								variant="sidebar"
+								size="compact"
 							/>
 						</button>
 

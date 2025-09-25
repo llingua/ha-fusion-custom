@@ -1,16 +1,60 @@
+# Sistema operativo
 .DS_Store
+Thumbs.db
+
+# Dipendenze
 node_modules
+/package-lock.json
+yarn.lock
+
+# Build e output
 /build
 /.svelte-kit
 /package
+/dist
+
+# File di configurazione sensibili
 .env
 .env.*
 !.env.example
+
+# Cache e file temporanei
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+.npm
+.yarn
+.cache
+*.log
+*.pid
+*.seed
+*.pid.lock
+
+# Editor e IDE
 .vscode
+.idea
+*.swp
+*.swo
+*~
+
+# Playground e sviluppo
 src/routes/playground
 src/lib/Playground
+
+# Dati dell'applicazione
 /data/configuration.yaml
 /data/youtube_credentials.json
 /data/version.json
+/data/*.db
+/data/*.sqlite
+/data/backups/
+
+# Coverage e test
+coverage/
+.nyc_output
+junit.xml
+
+# Documentazione temporanea
+docs/build/
+
+# File di istruzioni locali (non sincronizzare)
+../ISTRUZIONI_RECAP.md

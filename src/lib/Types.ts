@@ -144,6 +144,7 @@ export interface BarItem {
 	name?: string;
 	math?: string;
 	hide_mobile?: boolean;
+	size?: 'compact' | 'medium' | 'large';
 }
 
 export interface CameraItem {
