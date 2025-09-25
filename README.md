@@ -6,13 +6,18 @@ A modern, easy-to-use and performant custom [Home Assistant](https://www.home-as
 
 [![preview](/static/preview.png)](https://www.youtube.com/watch?v=D8mWruSuPOM)
 
-If you find this project useful, be sure to 🌟 this repository! If you love it, please consider donating! ❤️ <https://www.paypal.com/paypalme/matt8707>
 
 ## 🍴 Fork Notice
 
 This is a fork of the original ha-fusion project created by matt8707. All credit for the initial development and core architecture goes to the original author.
 
 If you find this project useful, please consider supporting the original creator: ❤️ <https://www.paypal.com/paypalme/matt8707>
+
+This project is a fork of the repository originally developed by matt8707 and released under the MIT License.
+
+- Original base release: 2024.10.1
+- Fork created: 24 September 2025
+- Additional development and modifications by: Lorenzo Lingua
 
 ### 🆕 Custom Features in This Fork
 

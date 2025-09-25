@@ -55,3 +55,6 @@ junit.xml
 
 # Documentazione temporanea
 docs/build/
+
+# File di istruzioni locali (non sincronizzare)
+../ISTRUZIONI_RECAP.md

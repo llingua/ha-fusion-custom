@@ -1,4 +1,12 @@
-# Come installare HA Fusion Custom su Home Assistant OS
+# HA Fusion Custom - Home Assistant Add-on
+
+This project is a fork of the repository originally developed by matt8707 and released under the MIT License.
+
+- Original base release: 2024.10.1
+- Fork created: 24 September 2025
+- Additional development and modifications by: Lorenzo Lingua
+
+## Come installare HA Fusion Custom su Home Assistant OS
 
 ## Struttura Directory da Creare
 
